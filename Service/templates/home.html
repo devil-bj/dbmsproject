@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Group Project - 17</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+
+            background-image: url('/static/assets/myimage.jpg'); /* Setting the background image */
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the image */
+            background-attachment: fixed; /* Fixed background */
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content {
+            width: 80%;
+            max-width: 800px;
+            margin: 2em;
+            padding: 1em;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for content */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .query-details {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .query-details h3 {
+            color: #333;
+        }
+        .query-route {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .query-link {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .query-link:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .content {
+                width: 90%;
+                margin: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Group Project -17</h1>
+</div>
+
+<div class="container">
+    <div class="content">
+        <div class="query-details">
+             <h3>Querying Details:</h3>
+            <p><b>Querying Details of a Program by ProgramID:</b><br>
+            <span class="query-route">Route: /program_details/&lt;int:program_id&gt;</span><br>
+            Example URL: <a href="http://localhost:5000/program_details/1" class="query-link" target="_blank">http://localhost:5000/program_details/1</a> (Replace 1 with the desired ProgramID)</p>
+
+            <p><b>Querying Evaluation Results by Semester:</b><br>
+            <span class="query-route">Route: /evaluation_results/&lt;int:program_id&gt;/&lt;semester&gt;</span><br>
+            Example URL: <a href="http://localhost:5000/final_results/10/Fall" class="query-link" target="_blank">http://localhost:5000/evaluation_results/1/Fall</a> (Replace 1 and Fall with the desired ProgramID and Semester)</p>
+
+            <p><b>Querying Departments:</b><br>
+            <span class="query-route">Route: /query_departments</span><br>
+            Example URL: <a href="http://localhost:5000/query_departments" class="query-link" target="_blank">http://localhost:5000/query_departments</a></p>
+
+            <p><b>Querying Evaluation Results by Academic Year:</b><br>
+            <span class="query-route">Route: /evaluation_results/&lt;academic_year&gt;</span><br>
+            Example URL: <a href="http://localhost:5000/evaluation_results/23-24" class="query-link" target="_blank">http://localhost:5000/evaluation_results/23-24</a> (Replace 23-24 with the desired academic year)</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

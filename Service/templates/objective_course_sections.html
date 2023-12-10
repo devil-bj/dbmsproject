@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Objective to Course Section</title>
+    <!-- Add any additional head elements here -->
+</head>
+<body>
+    <h2>Add Objective to Course Section</h2>
+    <form action="/add_objective_course_section" method="post">
+        <label for="objectiveId">Objective ID:</label>
+        <input type="number" id="objectiveId" name="objectiveId"><br><br>
+
+        <label for="sectionId">Section ID:</label>
+        <input type="number" id="sectionId" name="sectionId"><br><br>
+
+        <label for="evaluationMethod">Evaluation Method:</label>
+        <input type="text" id="evaluationMethod" name="evaluationMethod"><br><br>
+
+        <label for="studentsMetObjectives">Students Met Objectives:</label>
+        <input type="number" id="studentsMetObjectives" name="studentsMetObjectives"><br><br>
+
+        <input type="submit" value="Add">
+    </form>
+</body>
+</html>

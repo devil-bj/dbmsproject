@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Program</title>
+    <!-- This line of code adds the program to the database. -->
+</head>
+<body>
+    <h2>Add Program</h2>
+    <form action="/add_program" method="POST">
+        <label for="programName">Program Name:</label>
+        <input type="text" id="programName" name="programName"><br><br>
+
+        <label for="programCoordinatorId">Program Coordinator ID:</label>
+        <input type="number" id="programCoordinatorId" name="programCoordinatorId"><br><br>
+
+        <label for="programCoordinatorName">Program Coordinator Name:</label>
+        <input type="text" id="programCoordinatorName" name="programCoordinatorName"><br><br>
+
+        <label for="programCoordinatorUniversityID">Program Coordinator University ID:</label>
+        <input type="text" id="programCoordinatorUniversityID" name="programCoordinatorUniversityID"><br><br>
+
+        <label for="programCoordinatorEmail">Program Coordinator Email:</label>
+        <input type="email" id="programCoordinatorEmail" name="programCoordinatorEmail"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

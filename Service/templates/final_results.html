@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation Results {{ academic_year }}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 20px;
+        }
+        .container {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 0.25rem;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .objective-header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .objective-header h2 {
+            margin: 0;
+        }
+        .section-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .section-list li {
+            background-color: #e9ecef;
+            border: 1px solid #ced4da;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Evaluation Results for Academic Year {{ academic_year }}</h1>
+        {% for (objective_id, sub_obj_desc), obj_data in organized_data.items() %}
+            <div class="objective-header">
+                <h2>Objective {{ objective_id }} - {{ sub_obj_desc }}</h2>
+            </div>
+            <p><strong>Total Students:</strong> {{ obj_data.total_students }}</p>
+            <p><strong>Students Met Objective:</strong> {{ obj_data.students_met }} ({{ obj_data.percentage }}%)</p>
+            <h3>Sections:</h3>
+            <ul class="section-list">
+                {% for section in obj_data.sections %}
+                    <li>
+                        {{ section.course_title }} - Section {{ section.section_number }},
+                        {{ section.semester }}: Students Met: {{ section.students_met }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.9/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

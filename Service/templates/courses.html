@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Course</title>
+    <!-- This line of code adds the courses along with the department and description. -->
+</head>
+<body>
+    <h2>Add Course</h2>
+    <form action="/add_course" method="post">
+        <label for="courseId">Course ID:</label>
+        <input type="text" id="courseId" name="courseId"><br><br>
+
+        <label for="courseTitle">Course Title:</label>
+        <input type="text" id="courseTitle" name="courseTitle"><br><br>
+
+        <label for="courseDescription">Course Description:</label>
+        <textarea id="courseDescription" name="courseDescription"></textarea><br><br>
+
+        <label for="departmentId">Department ID:</label>
+        <input type="number" id="departmentId" name="departmentId"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

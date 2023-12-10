@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Section</title>
+    <!-- In this line of code, sections are added. -->
+</head>
+<body>
+    <h2>Add Section</h2>
+    <form action="/add_section" method="post">
+        <label for="courseId">Course ID:</label>
+        <input type="text" id="courseId" name="courseId"><br><br>
+
+        <label for="sectionNumber">Section Number:</label>
+        <input type="number" id="sectionNumber" name="sectionNumber"><br><br>
+
+        <label for="semester">Semester:</label>
+        <select id="semester" name="semester">
+            <option value="Fall">Fall</option>
+            <option value="Spring">Spring</option>
+            <option value="Summer">Summer</option>
+        </select><br><br>
+
+        <label for="year">Year:</label>
+        <input type="number" id="year" name="year"><br><br>
+
+        <label for="facultyId">Faculty ID:</label>
+        <input type="number" id="facultyId" name="facultyId"><br><br>
+
+        <label for="enrolledStudents">Enrolled Students:</label>
+        <input type="number" id="enrolledStudents" name="enrolledStudents"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
