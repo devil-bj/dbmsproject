@@ -52,14 +52,14 @@
             <thead class="thead-dark">
                 <tr>
                     <th>Faculty Name</th>
-                    <th>Associated Program</th>
+                    <th>Coordinator of Program</th>
                 </tr>
             </thead>
             <tbody>
                 {% for member in faculty %}
                 <tr>
                     <td>{{ member[0] }}</td> <!-- FacultyName -->
-                    <td>{{ member[1] or 'N/A' }}</td> <!-- Associated Program -->
+                    <td>{{ member[1] or 'Not a Coordinator' }}</td> <!-- Associated Program -->
                 </tr>
                 {% endfor %}
             </tbody>
